@@ -1,0 +1,93 @@
+html {
+    box-sizing: border-box;
+    background: #ffc600;
+    font-family: 'Caesar Dressing', cursive;
+    font-size: 10px;
+    font-weight: 100;
+}
+  
+body {
+    margin: 0;
+}
+  
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+ 
+.panels {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+ 
+.panel {
+    background: #6B0F9C;
+    box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1);
+    color: red;
+    text-align: center;
+    align-items: center;
+    /*transicion de la caja, open close*/
+    transition:
+      font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+      flex-grow 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+      background 0.2s;
+    font-size: 10px;
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+ 
+ 
+.panel1 { background-image:url(https://i.pinimg.com/originals/2c/b3/f5/2cb3f5a75a532abec96aaa60863a0655.jpg); }
+ 
+.panel2 { background-image:url(https://images2.alphacoders.com/907/thumb-1920-90722.jpg); }
+
+.panel3 { background-image:url(https://i.pinimg.com/originals/c9/18/c5/c918c5b8933198e5ce1802d05036351e.jpg); }
+ 
+.panel4 { background-image:url(https://i2.wp.com/images.pushsquare.com/news/2018/01/guide_best_god_of_war_games_ranked/attachment/4/original.jpg); }
+ 
+.panel5 { background-image:url(https://i.pinimg.com/originals/7a/ae/38/7aae388cc1a73bcec62064abcb7d3cb3.jpg); }
+ 
+.panel6 { background-image:url(https://wallpapercave.com/wp/wp462905.jpg); }
+
+.panel7 { background-image:url(https://psmedia.playstation.com/is/image/psmedia/god-of-war-3-remastered-screen-11-ps4-eu-15jul15?$MediaCarousel_Original$); }
+
+.panel8 { background-image:url(http://hdqwalls.com/wallpapers/god-of-war-4-2018-oo.jpg); }
+  
+ 
+ 
+/* Flex item */
+.panel > * {
+    margin: 0;
+    width: 100%;
+    transition: transform 0.5s;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel > *:first-child {transform: translateY(-100%);}
+.panel.open-active > *:first-child {transform: translateY(0);}
+.panel > *:last-child {transform: translateY(100%);}
+.panel.open-active > *:last-child {transform: translateY(0);}
+ 
+.panel p {
+    text-transform: uppercase;
+    font-family: 'Caesar Dressing', cursive;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+    font-size: 2em;
+}
+  
+.panel p:nth-child(2) {
+    font-size: 4em;
+}
+  
+.panel.open {
+    font-size: 30px;
+    flex: 5;
+}
